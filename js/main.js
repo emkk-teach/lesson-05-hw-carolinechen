@@ -6,6 +6,7 @@ $(document).ready(function(){
     var cityPick = $("#city-type").val();
     if (cityPick === "NYC" || cityPick === "nyc" || cityPick === "New York City" || cityPick === "new york city" || cityPick === "New York"){
     console.log(cityPick);
+    // You can remove classes more efficiently by using .remove() because it will remove all the classes already on the element.  You can also chain these commands so you only have to call the body once and then remove then add (so you don't remove the class you just added)
     $("body").addClass("nyc");
     $("body").removeClass("sf");
     $("body").removeClass("la");
@@ -42,6 +43,7 @@ $(document).ready(function(){
     $("body").addClass("sydney");
     //this will be a catch-all for anything typed in that isn't one of these five cities
   } else {
+    // Great job with the catch all!
     alert("Pick a more popular city!");
   }
     //make sure the form doesn't actually get submitted
